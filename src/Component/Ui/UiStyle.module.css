@@ -1,0 +1,73 @@
+/* ********************************counter */
+.numerik {
+    border-radius: 3px;
+    text-align: center;
+    border: 1px solid #7367f0;
+    overflow: hidden;
+    display: inline-block;
+    direction: ltr;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+  
+  }
+  
+  .btn-numerik-left {
+    margin: 0px;
+    border: none;
+    background-color: white;
+    border-left: 1px solid #7367f0;
+    padding: 6px 12px;
+    border-radius: 0px 3px 3px 0px;
+  }
+  
+  .btn-numerik-right {
+    margin: 0px;
+    border: none;
+    background-color: white;
+    border-right: 1px solid #7367f0;
+    padding: 6px 12px;
+    border-radius: 3px 0px 0px 3px;
+  }
+  
+  .input-numerik {
+    margin: 0px;
+    border: none;
+    height: 27px !important;
+  }
+  
+  .numerik input:focus {
+    outline: 0;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .btn-numerik-left-disable {
+    margin: 0px;
+    border: none;
+    background-color: white;
+    border: 1px solid rgb(181, 179, 179) ;
+    padding: 6px 12px;
+    border-radius: 0px 3px 3px 0px;
+  }
+  
+  .btn-numerik-right-disable {
+    margin: 0px;
+    border: none;
+    background-color: white;
+    border: 1px solid rgb(181, 179, 179) ;
+    padding: 6px 12px;
+    border-radius: 3px 0px 0px 3px;
+  }
+  .numerik-disable {
+    border-radius: 3px;
+    text-align: center;
+    border-radius: 3px 0px 0px 3px;
+    overflow: hidden;
+    display: inline-block;
+    direction: ltr;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+    border: 1px solid rgb(181, 179, 179) ;
+
+  
+  }

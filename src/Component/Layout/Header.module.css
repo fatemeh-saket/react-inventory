@@ -1,0 +1,44 @@
+.header {
+    left: 4% !important;
+    right: 4% !important;
+    top: 3% !important;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%)
+}
+.header-item {
+    display: flex;
+    justify-content: space-between !important;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 17%;
+}
+.languageTitle {
+    font-size: .8rem;
+    padding-right: 8px
+}
+/* MuiDrawer-paper{
+    background-color: #1f1f1f !important;
+} */
+.darkTheme{
+    background-color: #283046 !important;
+    color: #fff !important;
+}
+.lightTheme{
+    background-color: #fff !important;
+    color: black !important;
+}
+.notificationLimitProduct{
+    height:9vh;
+    border-top:1px solid #7367F0;
+    padding-top:.8rem;
+}
+
+.notificationLimitProductHeader{
+ display:flex;
+ padding:12px;
+ justify-content:end
+}

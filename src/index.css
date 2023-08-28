@@ -1,0 +1,83 @@
+
+
+
+/* .Item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #7367f0;
+  padding: 0.5rem 2rem;
+  height: 8vh;
+  color: #7367f0;
+} */
+.scroll-area {
+  margin: 1rem;
+  position: relative;
+  max-height: 80vh;
+  margin:0
+}
+
+
+.itemDetail-main-close {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  visibility: hidden;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 0.25s ease, color 0s;
+  height: 100%;
+}
+
+.itemDetail-main-open {
+  visibility: visible;
+  transition: all 0.65s ease, color 0s !important;
+  transform: translateX(0%) !important;
+  position: relative;
+}
+
+.MuiListItemIcon-root.css-cveggr-MuiListItemIcon-root {
+  min-width: 33px !important;
+}
+.MuiButton-startIcon {
+  margin-left: -1px !important;
+  margin-right: -3px !important;
+}
+/************************ change input style for textField *******************/
+
+.MuiFormLabel-root {
+  color: #7367f0 !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #7367f0 !important;
+}
+
+.MuiTable-root {
+  border-bottom: 1px solid white !important;
+}
+
+span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+  color: #7367f0 !important;
+}
+
+.MuiFormGroup-root {
+
+  flex-direction: row !important;
+}
+
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 1px solid #7367f0 !important;
+  border-bottom-color: #7367f0 !important;
+}
+
+.MuiInput-underline {
+  border-bottom: 1px solid #7367f0 !important;
+  border-bottom-color: #7367f0 !important;
+}
+.rmdp-input {
+  border: 1px solid #7367f0;
+  height: 44px !important;
+  margin: 1px 0;
+  padding: 2px 5px;
+}
