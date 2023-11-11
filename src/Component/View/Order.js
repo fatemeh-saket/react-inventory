@@ -33,7 +33,6 @@ export default function OrderItem(props) {
     const storesInfo = useSelector(state => state.products.storesInfo)
     const [openDeficits, setOpenDeficits] = useState(false)
 
-    console.log(openDeficits)
     //    ****open amount error
     const [inputErrorNot, setInputErrorNot] = useState(false)
 
@@ -225,7 +224,7 @@ export default function OrderItem(props) {
                 </Box>
             </Modal>
             {openDeficits && <Navigate to='/deficits' state={{ title: data.title, store: store }} />}
-            <Snackbars open={inputErrorNot} handleClose={handleCloseErrorInput} alert="error" message="به علت بالاتر بودن مقدار از وزن کلی  ثبت این مقدار امکان پذیر نمیباشد" />
+            <Snackbars open={inputErrorNot} handleClose={handleCloseErrorInput} alert="error" message="انتخاب مقدار بیشتر، به علت موجود نبودن محصول امکان پذیر نمی یاشد"   />
             <Snackbars open={inputErrorSell} handleClose={handleCloseErrorsellProduct} alert="error" message="ارسال این کالا به فروشگاه انتخابی امکان پذیر نمیباشد" />
 
         </div>

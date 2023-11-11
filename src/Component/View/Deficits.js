@@ -21,7 +21,7 @@ import { useSelector } from 'react-redux';
 import Snackbars from '../Ui/SnakBar'
 import { useContext, useState, useEffect } from 'react';
 import { soldProductActions } from '../../Store/Reducers/soldProducts-Slice'
-import {unavailableItemactions} from '../../Store/Reducers/deficits-slice'
+import { unavailableItemactions } from '../../Store/Reducers/deficits-slice'
 import { useLocation } from 'react-router-dom';
 
 
@@ -47,7 +47,6 @@ export default function Deficits(props) {
   const dispatch = useDispatch()
   const ctx = useContext(ThemeContext)
   const [rowsPerPage, setRowsPerPage] = useState(5);
-
   const sendData = useLocation();
   const [openPage, setOpenPage] = useState(sendData.state === null ? false : true)
 
@@ -182,10 +181,10 @@ export default function Deficits(props) {
                         <span className={`${row.status !== "ضروری" ? classes.unImportantType : classes.importantType}`}>{row.status}</span>
                       </TableCell>
 
-                      <TableCell align={ctx.isRtl ? "right" : "left"}   >
+                      <TableCell  align={ctx.isRtl ? "right" : "left"}   >
                         {
-                          allItems[indexItem].counterUnit === "number" ? allItems[indexItem].totalNumber : allItems[indexItem].weight >= Number(row.amount) &&
-                            <Button variant="outlined" color="primary"
+                           (allItems[indexItem].totalNumber >= Number(row.amount) || allItems[indexItem].weight >= Number(row.amount)) &&
+                            <Button variant="outlined" color="primary" 
                               onClick={() => {
                                 dispatch(soldProductActions.addItem({
                                   store: row.store,
@@ -194,7 +193,7 @@ export default function Deficits(props) {
                                 }))
                                 dispatch(itemactions.handleChangeSelectedItem(allItems[indexItem]))
                                 dispatch(itemactions.editItem(["soldItem", row.amount]))
-                                dispatch(unavailableItemactions.deleteItem(  ((page - 1) * rowsPerPage) + index   ))
+                                dispatch(unavailableItemactions.deleteItem(((page - 1) * rowsPerPage) + index))
                                 handleSnackbarClick()
                               }}
                             >
@@ -202,11 +201,21 @@ export default function Deficits(props) {
                             </Button>
                         }
                         {
-                          allItems[indexItem].counterUnit === "number" ? allItems[indexItem].totalNumber : allItems[indexItem].weight < Number(row.amount) &&
+                           (  (allItems[indexItem].totalNumber!=="0" && allItems[indexItem].totalNumber < Number(row.amount)) || ( allItems[indexItem].weight!=="0" && allItems[indexItem].weight < Number(row.amount)) ) &&
                             <Button variant="outlined" disabled >
                               موجودی ناکافی
                             </Button>
                         }
+
+
+
+
+                      
+
+
+
+
+
                       </TableCell>
 
                     </TableRow>

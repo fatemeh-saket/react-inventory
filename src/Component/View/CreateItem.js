@@ -247,10 +247,10 @@ const CreateItem = (props) => {
                 <DialogActions sx={{ direction: "flex", justifyContent: "space-around" }}>
                     <Button variant="contained" color="primary" component="span"
                         onClick={() => navigate("/stock/show")}>
-                        Close
+                            <FormattedMessage id="show" />
                     </Button>
                     <Button variant="contained" color="error" component="span"
-                        onClick={props.handleCloseModal}><FormattedMessage id="close" /></Button>
+                        onClick={handleCloseModal}><FormattedMessage id="close" /></Button>
                 </DialogActions>
             </Dialog>
         </Paper>
